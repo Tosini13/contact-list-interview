@@ -33,7 +33,7 @@ function App() {
 
   React.useEffect(() => {
     fetch();
-  }, []);
+  }, [fetch]);
 
   const handleSelect = React.useCallback(
     (id: string) => {
@@ -76,17 +76,20 @@ function App() {
   return (
     <div className="App">
       <div className="selected">Selected contacts: {selected.length}</div>
-      <div className="list">
-        {orderedData.map((personInfo) => (
-          <PersonInfo
-            key={personInfo.id}
-            data={personInfo}
-            isSelected={selected.includes(personInfo.id)}
-            onSelect={handleSelect}
-          />
-        ))}
+      <div>
+        <div data-testid="contact-list" className="list">
+          {orderedData.map((personInfo) => (
+            <PersonInfo
+              key={personInfo.id}
+              data={personInfo}
+              isSelected={selected.includes(personInfo.id)}
+              onSelect={handleSelect}
+            />
+          ))}
+        </div>
         <ErrorMessage error={error} />
         <button
+          data-testid="fetch-button"
           onClick={fetch}
           disabled={loading}
           style={loading ? { pointerEvents: "none" } : undefined}

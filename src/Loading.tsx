@@ -1,10 +1,8 @@
-type LoadingPropsType = {
-  isLoading?: boolean;
-};
+type LoadingPropsType = {};
 
-const Loading: React.FC<LoadingPropsType> = ({ isLoading }) => {
+const Loading: React.FC<LoadingPropsType> = () => {
   return (
-    <div data-test-id="loading" className="loading">
+    <div data-testid="loading" className="loading">
       <div />
       <div />
       <div />
