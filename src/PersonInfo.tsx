@@ -26,30 +26,12 @@ function PersonInfo(props: Props) {
   return (
     <div
       style={{
-        display: "flex",
-        height: "100px",
-        justifyContent: "space-between",
-        flexDirection: "column",
-        padding: "25px",
-        paddingBottom: "40px",
-        boxShadow: "0px 1px 2px 0px rgba(0, 0, 0, 0.15)",
-        margin: "10px 0",
-        background: "#fff",
-        cursor: "pointer",
-        minWidth: "350px",
-        gap: "43px",
         outline: isSelected ? "1px solid green" : "none",
       }}
       className="person-info"
       onClick={() => onSelect(data.id)}
     >
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: "10px",
-        }}
-      >
+      <div className="person-info-header">
         <div className="initials">{initials}</div>
         <div>
           <div className="firstNameLastName">{data.firstNameLastName}</div>

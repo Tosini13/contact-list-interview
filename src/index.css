@@ -26,9 +26,29 @@ code {
   margin: 10px 20px 0 0;
 }
 
+.person-info {
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 25px;
+  padding-bottom: 40px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+  margin: 10px 0;
+  background: #fff;
+  cursor: pointer;
+  min-width: 350px;
+  gap: 43px;
+  border: 2px solid transparent
+}
 .person-info:hover {
-  padding: 30px;
-  border: 2px solid pink;
+  border-color: pink;
+}
+
+.person-info-header{
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .initials {
