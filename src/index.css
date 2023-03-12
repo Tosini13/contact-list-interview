@@ -84,6 +84,18 @@ code {
   text-align: center;
 }
 
+.error-container{
+  height: 40px;
+  box-sizing: border-box;
+  line-height: 40px;
+  transition: all 300ms;
+  color: #e74c3c;
+}
+
+.error{
+  margin: 0px;
+}
+
 button {
  color: white;
  font-weight: 600;

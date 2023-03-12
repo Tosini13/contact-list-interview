@@ -1,5 +1,7 @@
 import React from "react";
 import apiData from "./api";
+import ErrorMessage from "./ErrorMessage";
+import Loading from "./Loading";
 import PersonInfo from "./PersonInfo";
 
 type ReturnType<T> = T extends (...arg: any) => Promise<infer R> ? R : never;
@@ -83,12 +85,14 @@ function App() {
             onSelect={handleSelect}
           />
         ))}
-        {loading ? (
-          <p>Loading</p>
-        ) : (
-          <button onClick={fetch}>{error ? "Refetch" : "Fetch more"}</button>
-        )}
-        {error && <p>There was an error</p>}
+        <ErrorMessage error={error} />
+        <button
+          onClick={fetch}
+          disabled={loading}
+          style={loading ? { pointerEvents: "none" } : undefined}
+        >
+          {loading ? <Loading /> : error ? "Refetch" : "Fetch more"}
+        </button>
       </div>
     </div>
   );
