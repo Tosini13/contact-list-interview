@@ -25,6 +25,7 @@ function PersonInfo(props: Props) {
 
   return (
     <div
+      data-testid="personal-info"
       style={{
         outline: isSelected ? "1px solid green" : "none",
       }}
