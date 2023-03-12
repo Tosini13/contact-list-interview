@@ -5,7 +5,7 @@ type ErrorMessagePropsType = {
 const ErrorMessage: React.FC<ErrorMessagePropsType> = ({ error }) => {
   return (
     <div
-      data-test-id="error_message"
+      data-testid="error_message"
       className="error-container"
       style={{
         height: error ? "40px" : "0px",
