@@ -83,3 +83,25 @@ code {
   width: 100%;
   text-align: center;
 }
+
+button {
+ color: white;
+ font-weight: 600;
+ background-color: #000000;
+ border-radius: 25px;
+ padding: 16px 32px;
+ cursor: pointer;
+ text-transform: uppercase;
+ border: none;
+ background-size: 0% 100%;
+ background-image: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 40%, rgba(255,255,255,.7) 100%);
+ background-repeat: no-repeat;
+ transition: background-color .5s;
+}
+
+
+button:hover{
+ background-color: #575757;
+ background-size: 200% 100%;
+ transition: all 1s;
+}
